@@ -1,4 +1,4 @@
-import { Component, AfterViewInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 declare var Swiper: any;
 
@@ -7,12 +7,18 @@ declare var Swiper: any;
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements AfterViewInit {
+export class AppComponent implements OnInit {
   title = 'swiper-test';
   swiper;
   slides = Array.from('ABCDEFGHIJKLMNOPQRSTUVWXYZ').map(x => 'Slide ' + x);
+  slidesData = {
+    offset: 0,
+    from: 0,
+    to: 0,
+    slides: []
+  };
 
-  ngAfterViewInit() {
+  ngOnInit() {
 
     this.swiper = new Swiper('.swiper-container', {
       navigation: {
@@ -28,7 +34,10 @@ export class AppComponent implements AfterViewInit {
       },
       virtual: {
         slides: this.slides,
-        renderSlide: (slide, index) => '<div class="swiper-slide"><div>' + slide + '</div><div>No. ' + (index + 1) + '</div></div>'
+        renderExternal: (data) => {
+          // console.log(data);
+          this.slidesData = data;
+        }
       }
     });
 

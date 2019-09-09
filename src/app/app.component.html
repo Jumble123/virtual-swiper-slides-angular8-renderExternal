@@ -2,6 +2,13 @@
 <div class="swiper-container">
   <!-- Additional required wrapper -->
   <div class="swiper-wrapper">
+    <div class="swiper-slide"
+        [attr.data-swiper-slide-index]="(slidesData.from + idx)"
+        [style.left]="slidesData.offset + 'px'"
+        *ngFor="let slide of slidesData.slides; let idx = index">
+      <div>{{ slide }}</div>
+      <div>No. {{ (slidesData.from + idx + 1) }}</div>
+    </div>
   </div>
   <!-- If we need pagination -->
   <div class="swiper-pagination"></div>
