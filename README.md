@@ -8,4 +8,4 @@ This is like the repo at <a href="https://github.com/Jumble123/virtual-swiper-sl
   <li>the <code>.swiper-slide</code> styles work within <a href="src/app/app.component.scss">src/app/app.component.scss</a> (so have been moved from <a href="src/styles.scss">src/styles.scss</a>).
 </ul>
 
-See the commit at <a href="commit/a5a99e6251245bf4556ec61dd8b2b92d88efffdc">commit/a5a99e6251245bf4556ec61dd8b2b92d88efffdc</a> for the differences.
+The most interesting commit to look at is <a href="https://github.com/Jumble123/virtual-swiper-slides-angular8-renderExternal/commit/a5a99e6251245bf4556ec61dd8b2b92d88efffdc">https://github.com/Jumble123/virtual-swiper-slides-angular8-renderExternal/commit/a5a99e6251245bf4556ec61dd8b2b92d88efffdc</a>.
