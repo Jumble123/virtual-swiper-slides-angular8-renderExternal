@@ -30,9 +30,7 @@
               "node_modules/swiper/dist/css/swiper.css",
               "src/styles.scss"
             ],
-            "scripts": [
-              "node_modules/swiper/dist/js/swiper.js"
-            ],
+            "scripts": [],
             "es5BrowserSupport": true
           },
           "configurations": {
